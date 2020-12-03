@@ -1,0 +1,32 @@
+<!-- instagram -->
+{% load wagtailcore_tags %}
+
+<section class="pb-1 no-overflow">
+    <div class="container">
+        <div class="row gutter-1">
+            <div class="col-md-6 col-lg-4 level-1">
+                <div class="card card-equal bg-primary text-white">
+                    <div class="card-header p-4">
+                        <i class="icon-instagram fs-30"></i>
+                    </div>
+                    <div class="card-footer p-4">
+
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-6 col-lg-8">
+                <div class="owl-carousel owl-carousel-alt visible" data-items="[2,2,1,1]" data-margin="10"
+                     data-loop="true"
+                     data-nav="true">
+            {% for item in value.items %}
+
+                    {% include_block item %}
+                        {% endfor %}
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

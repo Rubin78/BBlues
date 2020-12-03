@@ -1,0 +1,18 @@
+<!-- cta -->
+{% load wagtailcore_tags %}
+
+<section class="py-0 no-overflow">
+
+    <div class="container">
+        <div class="row gutter-2 gutter-md-4 justify-content-between vh-100 py-10">
+
+
+            {% for item in value.items %}
+
+                {% include_block item %}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

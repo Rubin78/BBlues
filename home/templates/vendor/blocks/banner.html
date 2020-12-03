@@ -1,0 +1,23 @@
+{% load wagtailcore_tags %}
+
+
+<!-- banner -->
+<section class="py-0 relative">
+    <div class="container">
+        <div class="row">
+            {% for item in value.items %}
+                <div class="col">
+                    {% include_block item %}
+
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

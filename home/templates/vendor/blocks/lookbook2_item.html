@@ -1,0 +1,88 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-621x460-c100 as photo1 %}
+{% image value.photo2 fill-621x460-c100 as photo2 %}
+{% image value.photo3 fill-621x776-c100 as photo3 %}
+
+
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <h1 class="mb-2">{{ value.heading }}</h1>
+        <p class="lead">{{ value.paragraphtop1 }}</p>
+        <p>{{ value.paragraphtop2 }}</p>
+    </div>
+</div>
+<div class="row gutter-1 masonry gallery collage mb-10">
+    <div class="col-6">
+        <figure class="equal equal-75">
+            <a class="image image-scale" href="{% pageurl value.link %} }"
+               style="background-image: url({{ photo1.url }});">
+            </a>
+        </figure>
+    </div>
+    <div class="col-6">
+        <figure class="equal equal-125">
+            <a class="image image-scale" href="assets/images/about-2.jpg"
+               style="background-image: url({{ photo2.url }});">
+            </a>
+        </figure>
+    </div>
+    <div class="col-6">
+        <figure class="equal equal-50">
+            <a class="image image-scale" href="assets/images/about-3.jpg"
+               style="background-image: url({{ photo3.url }});">
+            </a>
+        </figure>
+    </div>
+</div>
+{#<div class="row gutter-4">#}
+{#    <div class="col-md-4">#}
+{#        <div class="text-center px-2">#}
+{#            <i class="text-dark icon-Money---Alt fs-40 mb-2"></i>#}
+{#            <h4 class="eyebrow d-block text-dark">{{ value.heading1 }}</h4>#}
+{#            <p>{{ value.paragraph1 }}</p>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-4">#}
+{#        <div class="text-center px-2">#}
+{#            <i class="text-dark icon-Airplane fs-40 mb-2"></i>#}
+{#            <h4 class="eyebrow d-block text-dark">{{ value.heading2 }}</h4>#}
+{#            <p>{{ value.paragraph2 }}</p>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-4">#}
+{#        <div class="text-center px-2">#}
+{#            <i class="text-dark icon-Guard fs-40 mb-2"></i>#}
+{#            <h4 class="eyebrow d-block text-dark">{{ value.heading3 }}</h4>#}
+{#            <p>{{ value.paragraph3 }}</p>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+
+ <div class="row gutter-4">
+          <div class="col-md-4">
+            <div class="text-center px-2">
+              <i class="icon-Money---Alt fs-40 mb-2"></i>
+              <h4 class="eyebrow d-block text-white">{{ value.heading1 }}</h4>
+              <p>{{ value.paragraph1 }}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center px-2">
+              <i class="icon-Airplane fs-40 mb-2"></i>
+              <h4 class="eyebrow d-block text-white">{{ value.heading2 }}</h4>
+              <p>{{ value.paragraph2 }}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center px-2">
+              <i class="icon-Guard fs-40 mb-2"></i>
+              <h4 class="eyebrow d-block text-white">{{ value.heading3 }}</h4>
+              <p>{{ value.paragraph3 }}</p>
+            </div>
+          </div>
+
+</div>

@@ -1,0 +1,75 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-611x764-c100 as photo %}
+{% image value.photo1 fill-611x764-c100 as photo1 %}
+{% image value.photo2 fill-400x550-c100 as photo2 %}
+<div class="row align-items-end gutter-3">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-8">
+                <h1>New &amp; Stylish <b>Lookbooks</b></h1>
+                <p>{{ value.text }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a href="" data-toggle="modal" data-target="#lookbook" class="card card-scale card-equal equal-125">
+                  <span class="image" style="background-image: url({{ photo.url }})"></span>
+                  <div class="card-footer">
+                    <span class="btn btn-white btn-lg btn-action">Shop this look <span class="icon-arrow-right"></span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col">
+                <a href="" data-toggle="modal" data-target="#lookbook" class="card card-scale card-equal equal-125">
+                  <span class="image" style="background-image: url({{ photo1.url }})"></span>
+                  <div class="card-footer">
+                    <span class="btn btn-white btn-lg btn-action">Shop this look <span class="icon-arrow-right"></span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="bg-purple p-2 p-md-4 text-white">
+                  <div class="decoration" style="background-image: url({{ photo2.url }})"></div>
+                  <div class="row">
+                    <div class="col-10">
+                      <h2 class="font-weight-light">Get daily lookbooks <b class="d-block">in your inbox.</b></h2>
+                      <p>{{ valuee.text2 }}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Email" aria-label="your email address" aria-describedby="button-addon3">
+                        <div class="input-group-append">
+                          <button class="btn btn-white" type="button" id="button-addon3">Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

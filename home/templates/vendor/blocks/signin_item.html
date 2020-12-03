@@ -1,0 +1,4 @@
+     {% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-1594x981-c100 as photo %}
+      <div class="image image-overlay" style="background-image:url({{ photo.url }})"></div>

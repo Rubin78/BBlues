@@ -1,0 +1,18 @@
+{% load wagtailcore_tags %}
+
+
+<!-- product -->
+<section class="hero bg-light pt-5">
+    <div class="container">
+
+
+        {% for item in value.items %}
+
+            {% include_block item %}
+
+        {% endfor %}
+
+
+    </div>
+    </div>
+</section>

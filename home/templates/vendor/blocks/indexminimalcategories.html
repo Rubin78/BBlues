@@ -1,0 +1,19 @@
+ {% load wagtailcore_tags %}
+
+    <!-- categories -->
+    <section class="pt-1">
+      <div class="container-full">
+        <div class="row masonry gutter-1">
+          {% for item in value.items %}
+            <div class="col-md-4">
+
+
+        {% include_block item %}
+
+          </div>
+                {% endfor %}
+
+
+        </div>
+      </div>
+    </section>

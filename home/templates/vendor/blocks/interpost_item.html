@@ -1,0 +1,67 @@
+        {% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-836x418-c100 as photo1 %}
+        {% image value.photo2 fill-836x418-c100 as photo2 %}
+        <!-- paragraph -->
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <p>{{ value.paragraph }}</p>
+          </div>
+        </div>
+
+        <!-- carousel -->
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <div class="owl-carousel text-center" data-nav="true">
+              <figure class="card card-equal equal-50">
+                <span class="image" style="background-image: url({{ photo1.url }})"></span>
+              </figure>
+              <figure class="card card-equal equal-50">
+                <span class="image" style="background-image: url({{ photo2.url }})"></span>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- blockquote -->
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <blockquote class="blockquote">
+              <p>{{ value.blockquotetext }}</p>
+            </blockquote>
+          </div>
+        </div>
+
+
+        <!-- paragraph -->
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <p>{{ value.paragraph1 }}</p>
+          </div>
+        </div>
+
+
+        <!-- list group -->
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <div class="row">
+              <div class="col-md-8">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex align-items-center">
+                    <i class="icon-check fs-22 text-primary"></i>
+                    <span>{{ value.text1 }}</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <i class="icon-check fs-22 text-primary"></i>
+                    <span>{{ value.text2 }}</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <i class="icon-check fs-22 text-primary"></i>
+                    <span>{{ value.text3 }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>

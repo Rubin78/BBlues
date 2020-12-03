@@ -1,0 +1,9 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-652x815-c100 as photo %}
+
+<figure class="equal equal-125">
+    <a class="image" href="{% pageurl value.link %}"
+       style="background-image: url({{photo.url }});">
+    </a>
+</figure>

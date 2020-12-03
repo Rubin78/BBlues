@@ -1,0 +1,26 @@
+{% load wagtailcore_tags %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="partners">
+                    <h2 class="eyebrow">Brands you love</h2>
+                    <div class="owl-carousel owl-carousel-alt" data-items="[6,4,4,2]" data-loop="true" data-nav="true"
+                         data-autoplay="true">
+                        {% for item in value.items %}
+
+                                {% include_block item %}
+
+
+
+
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

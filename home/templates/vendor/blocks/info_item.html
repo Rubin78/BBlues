@@ -1,0 +1,99 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{##}
+{#            <div class="row gutter-2">#}
+{##}
+{#  <div class="col-md-8">#}
+{##}
+{#                    <div class="col-md-4">#}
+{#                <ul class="nav nav-tabs flex-md-column lavalamp" id="component-2" role="tablist">#}
+{#                  <li class="nav-item">#}
+{#                    <a class="nav-link active" data-toggle="tab" href="#component-2-1" role="tab" aria-controls="component-2-1" aria-selected="true">{{ value.heading1 }}</a>#}
+{#                  </li>#}
+{#                  <li class="nav-item">#}
+{#                    <a class="nav-link" data-toggle="tab" href="#component-2-2" role="tab" aria-controls="component-2-2" aria-selected="false">{{value.heading2 }}</a>#}
+{#                  </li>#}
+{#                  <li class="nav-item">#}
+{#                    <a class="nav-link" data-toggle="tab" href="#component-2-3" role="tab" aria-controls="component-2-3" aria-selected="false">{{value.heading3 }}</a>#}
+{#                  </li>#}
+{#                </ul>#}
+{#              </div>#}
+{#  </div>#}
+{##}
+{#<div class="tab-content" id="component-2-content">#}
+{#                  <div class="tab-pane fade show active" id="component-2-1" role="tabpanel" aria-labelledby="component-2-1">#}
+{#                    <p>{{ value.paragraph }}</p>#}
+{#                  </div>#}
+{#                  <div class="tab-pane fade" id="component-2-2" role="tabpanel" aria-labelledby="component-2-2">#}
+{#                    <ul class="list-group list-group-line">#}
+{#                      <li class="list-group-item">{{ value.link1 }}</li>#}
+{#                      <li class="list-group-item">{{ value.link2 }}</li>#}
+{#                      <li class="list-group-item">{{ value.link3 }}</li>#}
+{#                    </ul>#}
+{#                  </div>#}
+{#                  <div class="tab-pane fade" id="component-2-3" role="tabpanel" aria-labelledby="component-2-3">#}
+{#                    <p>{{ value.paragraph1 }}</p>#}
+{#                    <p>{{ value.paragraph2 }}</p>#}
+{#                  </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+
+  <div class="row gutter-2">
+              <div class="col-md-4">
+                <ul class="nav nav-tabs flex-md-column lavalamp" id="component-2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#component-2-1" role="tab" aria-controls="component-2-1" aria-selected="true">{{ value.heading1 }}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#component-2-2" role="tab" aria-controls="component-2-2" aria-selected="false">{{ value.heading2 }}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#component-2-3" role="tab" aria-controls="component-2-3" aria-selected="false">{{ value.heading3 }}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content" id="component-2-content">
+                  <div class="tab-pane fade show active" id="component-2-1" role="tabpanel" aria-labelledby="component-2-1">
+                    <p>{{ value.paragraph }}</p>
+                  </div>
+                  <div class="tab-pane fade" id="component-2-2" role="tabpanel" aria-labelledby="component-2-2">
+                    <ul class="list-group list-group-line">
+                      <li class="list-group-item">{{ value.link1 }}</li>
+                      <li class="list-group-item">{{ value.link2 }}</li>
+                      <li class="list-group-item">{{ value.link3 }}</li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="component-2-3" role="tabpanel" aria-labelledby="component-2-3">
+                    <p>{{ value.paragraph1 }}</p>
+                    <p>{{ value.paragraph2 }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

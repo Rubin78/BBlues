@@ -1,0 +1,27 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-410x615 as photo %}
+
+<div class="image image-overlay" style="background-image: url({{ photo.url }})"></div>
+
+{#<a href="#!">#}
+{#    <div class="card-header">#}
+{#        <span class="eyebrow mb-1 text-white ">Category</span>#}
+{#        <h3 class="card-title w-75 fs-26">{{ value.paragraph }}</h3>#}
+{#    </div>#}
+{#    <div class="card-footer text-right">#}
+{#        <span class="btn btn-ico btn-rounded btn-white"><i class="icon-chevron-right"></i></span>#}
+{#    </div>#}
+{#</a>#}
+{##}
+
+
+ <a href="#!">
+                <div class="card-header">
+                  <span class="eyebrow mb-1">{{ value.categories }}</span>
+                  <h3 class="card-title w-75 fs-26">{{ value.title }}</h3>
+                </div>
+                <div class="card-footer text-right">
+                  <span class="btn btn-ico btn-rounded btn-white"><i class="icon-chevron-right"></i></span>
+                </div>
+              </a>

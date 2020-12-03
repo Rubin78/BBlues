@@ -1,0 +1,15 @@
+{% load wagtailcore_tags %}
+
+<section class="separator-bottom">
+    <div class="container">
+        <div class="row gutter-4">
+
+
+            {% for item in value.items %}
+
+                {% include_block item %}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>

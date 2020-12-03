@@ -1,0 +1,23 @@
+{% load wagtailcore_tags %}
+
+
+<!-- cta -->
+<section class="no-overflow">
+    {% for item in value.items %}
+
+        {% include_block item %}
+
+    {% endfor %}
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-md-8 col-lg-5 text-white">
+                <div class="bg-purple p-2 p-md-4">
+                    <h2 class="font-weight-light">Get <b>20% OFF</b> on accessories.</h2>
+                    <div id="timer" class="timer mt-3"></div>
+                    <a href="#!" class="btn btn-white btn-lg btn-block">Shop Now</a>
+                    <p class="small pt-1">Can't be used with other promo codes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

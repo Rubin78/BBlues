@@ -1,0 +1,25 @@
+{% load wagtailcore_tags %}
+{% load utilities %}
+
+
+<section class="pt-0">
+    <div class="container">
+        <div class="row masonry gutter-1" style="position: relative; height: 1061.64px;">
+            {% for item in value.items %}
+
+                <div class="col-md-6 col-lg-4 " style="position: absolute; left: 0px; top: 0px;">
+                    <article
+                            class="card card-equal card-scale  text-white {% if forloop.counter|masonryRandomKey:2 %}equal-150{% endif %}">
+                        {% include_block item %}
+                    </article>
+
+
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+</section>

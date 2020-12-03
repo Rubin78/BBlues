@@ -1,0 +1,18 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-360x180-c100 as photo %}
+
+
+
+
+        <div class="card card-post">
+            <figure class="equal equal-50">
+                <a class="image image-fade" href="{% pageurl value.link %}"
+                   style="background-image: url({{ photo.url }})"></a>
+            </figure>
+            <div class="card-body">
+                <span class="eyebrow text-muted">{{ value.date }}</span>
+                <h4 class="card-title"><a href="{% pageurl value.link %}">{{ value.heading }}</a></h4>
+            </div>
+        </div>
+

@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+<!-- cta -->
+<section class="no-overflow py-0">
+    {% for item in value.items %}
+        {% include_block item %}
+    {% endfor %}
+
+</section>

@@ -1,0 +1,14 @@
+{% load wagtailcore_tags %}
+
+<section class="hero hero-small">
+    <div class="container">
+        <div class="row">
+            {% for item in value.items %}
+
+                {% include_block item %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

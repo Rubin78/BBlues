@@ -1,0 +1,55 @@
+{#{% extends "base.html" %}#}
+{#{% load wagtailcore_tags %}#}
+{#{% load static %}#}
+{##}
+{#{% block body_class %}template-homepage{% endblock %}#}
+{##}
+{#{% block extra_css %}#}
+{##}
+{#{% endblock extra_css %}#}
+{##}
+{##}
+{#{% block content %}#}
+{#    {{ page.body|richtext }}#}
+{##}
+{#{% endblock content %}#}
+
+
+
+
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+
+
+
+{% block content %}
+
+    {% include_block page.body %}
+
+{% endblock content %}
+
+
+
+
+
+
+{#    {{ page.body|richtext }}#}
+{#    {{ page.intro|richtext }}#}
+{#    {{ page.date }}#}
+{#    <br>{{ page.get_children }}#}
+{##}
+{#      {% for post in page.get_children %}#}
+{#          #}
+{#           <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>#}
+{#        {{ post.specific.intro }}#}
+{#        {{ post.specific.body|richtext }}#}
+{#          {{ post.specific.date }}#}
+{#      {% endfor %}#}

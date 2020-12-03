@@ -1,0 +1,25 @@
+{% load wagtailcore_tags %}
+
+<!-- blog -->
+<section class="pt-0">
+    <div class="container">
+        <div class="row masonry gutter-3">
+            {% for item in value.items %}
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-post">
+
+
+                        {% include_block item %}
+
+
+                    </article>
+                </div>
+            {% endfor %}
+
+
+        </div>
+
+
+    </div>
+</section>

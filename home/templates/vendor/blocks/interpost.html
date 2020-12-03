@@ -1,0 +1,14 @@
+{% load wagtailcore_tags %}
+
+<section class="pt-5">
+      <article class="container">
+
+{% for item in value.items %}
+
+        {% include_block item %}
+
+    {% endfor %}
+
+      </article>
+    </section>
+

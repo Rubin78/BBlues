@@ -1,0 +1,23 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-1423x1176-c100 as photo %}
+{% image value.photo1 fill-388x485-c100 as photo1 %}
+
+    <div class="image image-overlay image-scroll" style="background-image:url({{ photo.url }})"
+         data--100-bottom-top="transform: translateY(0%);"
+         data-top-bottom="transform: translateY(25%);"></div>
+<div class="col-md-6 align-self-center text-white">
+    <h3 class="display-1 ">{{ value.heading }}</h3>
+    <a href="{% pageurl value.link %} }}" class="btn btn-outline-white mt-3">Shop Earphones Now</a>
+</div>
+
+
+<div class="col-md-5 col-lg-4 align-self-end">
+    <a href="#!" class="product product-card">
+        <div class="equal equal-125">
+            <span class="image image-scale" style="background-image: url({{ photo1.url }})"></span>
+            <h3 class="product-title">{{ value.heading1 }}</h3>
+            <div class="product-price-big"><span>$</span><span>{{ value.cost }}</span></div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,28 @@
+{% load wagtailcore_tags %}
+
+
+<!-- hero -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for item in value.items %}
+            {% include_block item %}
+            {% include_block item %}
+        {% endfor %}
+
+    </div>
+    <div class="swiper-footer">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

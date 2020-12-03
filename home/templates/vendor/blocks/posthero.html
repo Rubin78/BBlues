@@ -1,0 +1,14 @@
+{% load wagtailcore_tags %}
+{% load static %}
+
+<section class="hero pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+ {% for item in value.items %}
+
+        {% include_block item %}
+
+    {% endfor %}
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,13 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-570x500-c100 as photo %}
+
+<div class="col-md-6 cta-image">
+    <div class="image image-overlay image-scroll" style="background-image:url({{ photo.url }})"
+         data--100-bottom-top="transform: translateY(0%);"
+         data-top-bottom="transform: translateY(25%);"></div>
+</div>
+<div class="col-md-6 py-5 py-md-0 text-white text-center">
+    <h2 class="mb-2">{{ value.heading }}</h2>
+    <a href="{% pageurl value.link %}" class="underline action">Get in Touch</a>
+</div>

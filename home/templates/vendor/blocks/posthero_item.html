@@ -1,0 +1,19 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% image value.photo fill-1594x411-c100 as photo %}
+
+
+
+
+      <span class="image image-overlay" style="background-image: url({{ photo.url }})"></span>
+
+    <div class="col-md-10 col-lg-8 text-white">
+            <span class="eyebrow decorated mb-1">{{ value.title }}</span>
+            <h1 class="mb-2">{{ value.heading }}</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Post</li>
+              </ol>
+            </nav>
+          </div>

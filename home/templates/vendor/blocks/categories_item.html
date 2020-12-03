@@ -1,0 +1,44 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-620x620-c100 as photo1 %}
+{% image value.photo2 fill-620x305-c100 as photo2 %}
+{% image value.photo3 fill-620x305-c100 as photo3 %}
+
+<div class="row gutter-1 text-white">
+    <div class="col-lg-5">
+        <h2>{{ value.heading|richtext }}</h2>
+    </div>
+    <div class="col-lg-7">
+        <p>{{ value.text }}</p>
+    </div>
+</div>
+<div class="row masonry gutter-1 collage" style="position: relative; height: 575px;">
+    <div class="col-lg-6" style="position: absolute; left: 0px; top: 0px;">
+        <a href="{% pageurl value.link %}" class="card card-equal card-scale">
+            <span class="image" style="background-image: url({{ photo1.url }})"></span>
+            <div class="card-footer text-white">
+                <span class="btn btn-white btn-action">Dresses <span class="icon-arrow-right"></span></span>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-lg-6" style="position: absolute; left: 575px; top: 0px;">
+        <a href="{% pageurl value.link %}" class="card card-equal equal-50 card-scale">
+            <span class="image" style="background-image: url({{ photo2.url }})"></span>
+            <div class="card-footer text-white">
+                <span class="btn btn-white btn-action">Watches <span class="icon-arrow-right"></span></span>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-lg-6" style="position: absolute; left: 575px; top: 287.5px;">
+        <a href="{% pageurl value.link %}" class="card card-equal equal-50 card-scale">
+            <span class="image" style="background-image: url({{ photo3.url }})"></span>
+            <div class="card-footer text-white">
+                <span class="btn btn-white btn-action">Sneakers <span class="icon-arrow-right"></span></span>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{% load wagtailcore_tags %}
+
+
+<!-- product -->
+<section class="pt-5">
+    <div class="container">
+        <div class="row gutter-2 gutter-md-4 justify-content-between">
+
+            {% for item in value.items %}
+
+                {% include_block item %}
+
+             {% endfor %}
+
+
+        </div>
+    </div>
+</section>

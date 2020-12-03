@@ -1,0 +1,21 @@
+<!-- cta -->
+{% load wagtailcore_tags %}
+
+
+<section class="pt-0">
+    <div class="container">
+        <div class="cta bg-primary">
+
+            <div class="row align-items-center gutter-0">
+                {% for item in value.items %}
+
+
+                    {% include_block item %}
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+    </div>
+</section>

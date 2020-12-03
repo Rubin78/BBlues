@@ -1,0 +1,7 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-262x262-c100 as photo %}
+
+
+
+<figure class="equal"><a class="image image-fade" href="#!"  style="background-image: url({{ photo.url }})"></a></figure>

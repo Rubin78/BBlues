@@ -1,0 +1,15 @@
+     {% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-1423x784 as photo %}
+
+        <div class="swiper-slide">
+          <div class="image image-overlay image-zoom" style="background-image:url({{ photo.url }})"></div>
+          <div class="container">
+            <div class="row align-items-center justify-content-center vh-80">
+              <div class="col-lg-8 text-white text-center" data-swiper-parallax-y="-100%">
+                <h1 class="display-2 mb-2">{{ value.heading|richtext }}</h1>
+                <a href="{% pageurl value.link %}" class="btn btn-white">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>

@@ -1,0 +1,31 @@
+{% load wagtailcore_tags %}
+{% load utilities %}
+
+<!-- listing -->
+<section class="pt-0">
+    <div class="container">
+
+
+        <div class="row">
+
+            <!-- content -->
+            <div class="col">
+                <div class="row gutter-3 masonry">
+
+
+                    {% for item in value.items %}
+
+                        <div class="col-md-6 col-lg-4 text-white">
+                                <article class="card card-equal card-scale {% if forloop.counter|masonryRandomKey:2 %}equal-150{% endif %}">
+                                    {% include_block item %}
+                                </article>
+                        </div>
+
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

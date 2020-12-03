@@ -1,0 +1,16 @@
+<!-- slider -->
+{% load wagtailcore_tags %}
+
+    <div class="swiper-container swiper-container-alt">
+
+      <div class="swiper-wrapper">
+                {% for item in value.items %}
+            {% include_block item %}
+            {% include_block item %}
+        {% endfor %}
+
+
+              </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>

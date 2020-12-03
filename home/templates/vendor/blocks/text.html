@@ -1,0 +1,17 @@
+{% load wagtailcore_tags %}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                {% for item in value.items %}
+
+                    {% include_block item %}
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+</section>

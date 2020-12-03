@@ -1,0 +1,65 @@
+{% load wagtailcore_tags %}
+
+    <!-- info -->
+
+{#    <section class="separator-top">#}
+{#      <div class="container">#}
+{#        <div class="row gutter-4 justify-content-between">#}
+{##}
+{#          <div class="col-lg-9 order-2 order-lg-1">#}
+{##}
+{##}
+{#           {% for item in value.items %}#}
+{##}
+{##}
+{#        {% include_block item %}#}
+{##}
+{#                {% endfor %}#}
+{##}
+{#          </div>#}
+{##}
+{#          <div class="col-lg-3 order-1 order-lg-2 text-lg-right">#}
+{#            <div class="rate">#}
+{#              <span>4.9</span>#}
+{#              <a data-toggle="modal" data-target="#reviews" class="action eyebrow text-primary underline">View Reviews</a>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{##}
+
+
+
+
+
+
+
+
+
+    <section class="separator-top">
+      <div class="container">
+        <div class="row gutter-4 justify-content-between">
+          <div class="col-lg-9 order-2 order-lg-1">
+                {% for item in value.items %}
+
+        {% include_block item %}
+
+    {% endfor %}
+
+
+
+
+
+          </div>
+
+
+          <div class="col-lg-3 order-1 order-lg-2 text-lg-right">
+            <div class="rate">
+              <span>4.9</span>
+              <a data-toggle="modal" data-target="#reviews" class="action eyebrow text-primary underline">View Reviews</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

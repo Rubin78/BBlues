@@ -1,0 +1,14 @@
+<!-- lookbook -->
+{% load wagtailcore_tags %}
+
+<section class="hero bg-purple text-white">
+    <div class="container">
+
+
+        {% for item in value.items %}
+
+            {% include_block item %}
+
+        {% endfor %}
+    </div>
+</section>

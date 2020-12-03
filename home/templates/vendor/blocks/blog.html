@@ -1,0 +1,26 @@
+{% load wagtailcore_tags %}
+
+<section class="pb-0">
+    <div class="container">
+
+        <div class="row align-items-end gutter-1">
+    <div class="col-md-8">
+        <h2>Blog Posts &amp; News</h2>
+    </div>
+    <div class="col-md-4 text-md-right">
+        <a href="#" class="action eyebrow underline">View All</a>
+    </div>
+</div>
+
+
+<div class="row gutter-3">
+            {% for item in value.items %}
+
+    <div class="col-md-6 col-lg-4">
+  {% include_block item %}
+    </div>
+     {% endfor %}
+</div>
+    </div>
+</section>
+

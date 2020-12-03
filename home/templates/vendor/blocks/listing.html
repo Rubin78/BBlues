@@ -1,0 +1,23 @@
+{% load wagtailcore_tags %}
+
+<section class="separator-top">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Denim &amp; Bottoms</h2>
+            </div>
+        </div>
+
+
+        <div class="row gutter-2 gutter-lg-3">
+            {% for item in value.items %}
+                <div class="col-6 col-lg-3">
+                    {% include_block item %}
+                </div>
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+</section>

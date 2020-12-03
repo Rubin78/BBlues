@@ -1,0 +1,7 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-616x770 as photo %}
+
+<span class="image image-scale" style="background-image: url({{ photo.url }})"></span>
+<h3 class="product-title">{{ value.heading }}</h3>
+<div class="product-price-big"><span>$</span><span>{{ value.cost }}</span></div>

@@ -1,0 +1,10 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-1835x746-c100 as photo %}
+
+
+      <div class="image image-overlay image-scroll" style="background-image:url({{ photo.url }})"
+      data--100-bottom-top="transform: translateY(0%);"
+      data-top-bottom="transform: translateY(25%);"></div>
+
+

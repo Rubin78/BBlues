@@ -1,0 +1,11 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="col text-center">
+    <h1 class="mb-0">{{ value.title }}</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% pageurl value.link %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ value.linkname }}</li>
+        </ol>
+    </nav>
+</div>

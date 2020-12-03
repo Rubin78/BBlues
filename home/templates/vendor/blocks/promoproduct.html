@@ -1,0 +1,40 @@
+{% load wagtailcore_tags %}
+
+<section class="no-overflow">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <ul class="nav nav-tabs lavalamp" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                           aria-controls="home" aria-selected="true">Related Products</a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="col">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="owl-carousel owl-carousel-arrows visible" data-items="[4,4,2,1]" data-margin="10"
+                             data-loop="true" data-dots="true" data-nav="true">
+
+
+                           {% for item in value.items %}
+
+                                {% include_block item %}
+
+
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

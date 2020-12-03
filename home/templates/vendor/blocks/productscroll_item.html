@@ -1,0 +1,54 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-770x1050-c100 as photo1 %}
+{% image value.photo2 fill-770x1050-c100 as photo2 %}
+{% image value.photo3 fill-770x1050-c100 as photo3 %}
+
+
+
+
+
+
+
+
+          <div class="col-lg-5 order-2">
+            <div class="sticky-top">
+
+              <div class="row">
+                <div class="col-12">
+                  <span class="item-brand">{{ value.tagname }}</span>
+                  <h1 class="item-title">{{ value.heading }}</h1>
+                  <span class="item-price">${{ value.cost }}</span>
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="col-md-8">
+                  <a href="#!" class="btn btn-block btn-lg btn-primary">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-1">
+            <div class="row gutter-3">
+              <div class="col-12">
+                <figure class="equal zoom">
+                  <img class="zoom-img" src="{{ photo1.url }}" alt="Product">
+                </figure>
+              </div>
+              <div class="col-12">
+                <figure class="equal zoom">
+                  <img class="zoom-img" src="{{ photo2.url }}" alt="Product">
+                </figure>
+              </div>
+              <div class="col-12">
+                <figure class="equal zoom">
+                  <img class="zoom-img" src="{{ photo3.url }}" alt="Product">
+                </figure>
+              </div>
+            </div>
+          </div>

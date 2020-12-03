@@ -1,0 +1,21 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-400x550-c100 as photo1 %}
+{% image value.photo2 fill-400x550-c100 as photo2 %}
+
+<div class="product">
+    <figure class="product-image">
+        <a href="{% pageurl value.link %}">
+            <img src="{{ photo1.url }}" alt="{{ value.heading }}">
+            <img src="{{ photo2.url }}" alt="{{ value.heading }}">
+        </a>
+    </figure>
+    <div class="product-meta">
+        <h3 class="product-title"><a href="{% pageurl value.link %} }}">{{ value.heading}}</a></h3>
+        {% if value.cost %}
+            <div class="product-price">
+                <span>${{ value.cost }}</span>
+            </div>
+        {% endif %}
+    </div>
+</div>
